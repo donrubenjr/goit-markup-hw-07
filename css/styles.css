@@ -45,9 +45,26 @@ svg {
 }
 
 .container {
-  /* width: 1158px; */
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: 428px) {
+    .container {
+      width: 428px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 768px;
+    }
+  }
+
+  @media screen and (min-width: 1158px) {
+    .container {
+      width: 1158px;
+    }
+  }
 }
 
 /* ----- Header/Navigation Section ----- */
@@ -71,6 +88,24 @@ svg {
     margin-right: 332px;
     margin-left: 76px;
     gap: 40px;
+
+    @media screen and (max-width: 768px) {
+      .header-menu-list {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      .header-menu-list {
+        display: flex;
+
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+      }
+    }
   }
 
   .contact-menu {
@@ -78,6 +113,36 @@ svg {
     justify-content: center;
     align-items: center;
     gap: 40px;
+
+    @media screen and (max-width: 768px) {
+      .contact-menu-list {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      .contact-menu-list {
+        display: flex;
+
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0.48px;
+      }
+    }
+  }
+
+  .hamburger-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      .hamburger-icon {
+        display: none;
+      }
+    }
   }
 }
 
@@ -134,6 +199,14 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (min-width: 768px) and (max-width: 1158px) {
+    .contact-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  }
 }
 
 .contact-menu-list {
@@ -563,7 +636,7 @@ form > button {
 }
 
 /* ----- Customer Section ----- */
-.customers {
+.customers-section {
   background-color: var(--WHITE);
 
   & h2 {
@@ -774,7 +847,7 @@ footer {
   }
 
   .container-logo-text {
-    margin: 101.5px 0px 120px 156px;
+    margin: 101.5px auto 120px auto; /*101.5px 0 120px 156px*/
   }
 
   .text {
@@ -789,13 +862,15 @@ footer {
 
 .footer-container {
   display: flex;
+  padding-left: 78px; /*added code*/
+  padding-right: 100px; /*added code*/
 }
 
 .container-text-icons {
   display: inline;
   align-items: start;
 
-  margin: 100px 0px 132px 120px;
+  margin: 100px auto 132px auto; /*100px 0px 132px 120px*/
 }
 
 .social-media {
@@ -818,9 +893,10 @@ footer {
   padding: 0;
 }
 
-/* ----- Subscribe Form ----- */
+/* ----- Subscription Form ----- */
 .subscribe-form-container {
-  margin-left: 80px;
+  margin-left: auto; /*margin-left: 80px;*/
+  margin-right: auto; /*previous sets no margin-right*/
   width: 453px;
 }
 
