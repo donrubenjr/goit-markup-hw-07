@@ -72,11 +72,16 @@ svg {
   position: sticky;
   top: 0;
   background-color: var(--WHITE);
+  z-index: 999;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 
   display: flex;
   justify-content: center;
   align-items: center;
   height: 72px;
+  /* padding: 0px 160px 0px 160px; */
 
   .nav-container {
     display: flex;
@@ -85,8 +90,6 @@ svg {
   }
 
   .header-menu {
-    margin-right: 332px;
-    margin-left: 76px;
     gap: 40px;
 
     @media screen and (max-width: 768px) {
@@ -108,6 +111,20 @@ svg {
     }
   }
 
+  @media screen and (max-width: 1158px) {
+    .header-menu {
+      margin-right: 120px;
+      margin-left: 120px;
+    }
+  }
+
+  @media screen and (min-width: 1158px) {
+    .header-menu {
+      margin-right: 332px;
+      margin-left: 76px;
+    }
+  }
+
   .contact-menu {
     display: flex;
     justify-content: center;
@@ -122,7 +139,8 @@ svg {
 
     @media screen and (min-width: 768px) {
       .contact-menu-list {
-        display: flex;
+        display: block;
+        margin-left: auto;
 
         font-family: Roboto;
         font-size: 12px;
@@ -202,8 +220,7 @@ svg {
 
   @media screen and (min-width: 768px) and (max-width: 1158px) {
     .contact-menu {
-      display: flex;
-      flex-wrap: wrap;
+      display: block;
       gap: 12px;
     }
   }
@@ -463,6 +480,20 @@ form > button {
   justify-content: center;
   gap: 20px;
   padding: 120px 16px;
+
+  @media screen and (max-width: 768px) {
+    .svg-anchor {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .article-title,
+  .article-paragraph {
+    display: flex;
+    flex-basis: calc(100%-30px / 4);
+  }
 }
 
 .section-article li {
@@ -862,8 +893,8 @@ footer {
 
 .footer-container {
   display: flex;
-  padding-left: 78px; /*added code*/
-  padding-right: 100px; /*added code*/
+  padding-left: 106px; /* added code */
+  padding-right: 116px; /* added code */
 }
 
 .container-text-icons {
