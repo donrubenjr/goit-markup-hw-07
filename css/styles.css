@@ -481,18 +481,18 @@ form > button {
   gap: 20px;
   padding: 120px 16px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1158px) {
     .svg-anchor {
       display: none;
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .article-title,
   .article-paragraph {
     display: flex;
-    flex-basis: calc(100%-30px / 4);
+    flex-basis: calc((100%-30px) / 2);
   }
 }
 
@@ -529,7 +529,11 @@ form > button {
   width: 264px;
   height: 112px;
 
-  background-color: var(--CLOUD);
+  @media screen and (min-width: 1158px) {
+    background-color: var(--CLOUD);
+  }
+
+  /* background-color: var(--CLOUD); */
   border-radius: 4px;
   border: 0px;
 }
