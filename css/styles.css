@@ -166,6 +166,7 @@ svg {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 16px;
 
     @media screen and (min-width: 768px) {
       .hamburger-icon {
@@ -259,11 +260,11 @@ svg {
 
   height: 600px;
   background-image: url(../images/people-office\ 1.jpg);
+  background-blend-mode: soft-light;
   background-color: var(--NAVY-BLUE);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-blend-mode: soft-light;
 
   & h1 {
     margin-bottom: 48px;
@@ -296,6 +297,14 @@ svg {
       font-size: 56px;
       line-height: 60px;
       letter-spacing: 1.12px;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/people-office\ 1.jpg);
+      background-blend-mode: soft-light;
+      background-color: var(--NAVY-BLUE);
     }
   }
 }
@@ -490,21 +499,40 @@ form > button {
 
 /* ----- Section Article ----- */
 .section-article ul {
-  margin-left: 156px;
-  margin-right: 156px;
+  /* margin-left: 156px;
+  margin-right: 156px; */
 }
 
 .section-article .article-unorder-list {
-  display: flex;
-  flex-wrap: wrap; /*added code*/
+  /* display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 120px 16px;
+  gap: 20px;*/
+  /* padding: 120px 16px; */
+
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  width: 100%;
 
   @media screen and (max-width: 1158px) {
     .svg-anchor {
       display: none;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-article .article-unorder-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: unset;
+    row-gap: 72px;
+    padding: 96px 16px;
+  }
+
+  .article-list-list {
+    width: calc((100% / 2) - 30px);
   }
 }
 
