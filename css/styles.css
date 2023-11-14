@@ -50,19 +50,19 @@ svg {
 
   @media screen and (min-width: 428px) {
     .container {
-      width: 428px;
+      max-width: 428px;
     }
   }
 
   @media screen and (min-width: 768px) {
     .container {
-      width: 768px;
+      max-width: 768px;
     }
   }
 
   @media screen and (min-width: 1158px) {
     .container {
-      width: 1158px;
+      max-width: 1158px;
     }
   }
 }
@@ -84,12 +84,12 @@ svg {
 
   @media screen and (max-width: 1158px) {
     .nav-container {
-      margin-left: 4px;
+      margin-left: 16px;
       margin-right: auto;
     }
 
     .div-contact-menu {
-      margin-right: 4px;
+      margin-right: 16px;
       margin-left: auto;
     }
   }
@@ -289,6 +289,14 @@ svg {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.64px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .hero-section {
+      font-size: 56px;
+      line-height: 60px;
+      letter-spacing: 1.12px;
+    }
   }
 }
 
