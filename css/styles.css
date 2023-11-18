@@ -835,7 +835,6 @@ form > button {
 
 /* ----- <portfolio.html> ----- */
 /* ----- Buttons Section ----- */
-
 ul {
   padding: 0;
   list-style: none;
@@ -877,12 +876,13 @@ ul {
   }
 }
 
-@media screen and (max-width: 428) {
+@media screen and (max-width: 428px) {
   .port-btn {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: start;
     gap: 24px;
+    padding-left: 16px;
 
     .port-item {
       width: calc((100% / 3) - auto);
@@ -911,9 +911,10 @@ ul {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
+      padding-left: 16px;
 
       .port-card-list {
-        width: calc((100% / 1) - 2px);
+        width: calc((100% / 1) - 16px);
       }
     }
 
