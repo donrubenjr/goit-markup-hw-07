@@ -929,10 +929,12 @@ ul {
       }
     }
 
-    @media screen and (min-width: 1158px), (max-width: 1158px) {
+    @media screen and (min-width: 1158px) {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
+      padding-left: 156px;
+      padding-right: 156px;
 
       .port-card-list {
         width: calc((100% / 3) - auto);
