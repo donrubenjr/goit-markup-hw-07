@@ -929,7 +929,7 @@ ul {
       }
     }
 
-    @media screen and (min-width: 1158px) {
+    @media screen and (min-width: 1158px), (max-width: 1158px) {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
@@ -1441,11 +1441,6 @@ footer {
 }
 
 .js-close-menu {
-  /* position: absolute;
-  top: 24px;
-  right: 24px;
-  cursor: pointer; */
-
   display: flex;
   justify-content: center;
   align-items: center;
