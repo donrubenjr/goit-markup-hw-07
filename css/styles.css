@@ -67,11 +67,13 @@ svg {
   }
 }
 
-/* ----- Header/Navigation Section ----- */
-.header-container {
+/* ----- Header Section ----- */
+.container.header-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding-left: 156px;
+  padding-right: 156px;
   height: 72px;
 
   @media screen and (min-width: 1158px) {
@@ -84,35 +86,22 @@ svg {
       0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   }
 
-  @media screen and (max-width: 1158px) {
-    .nav-container {
-      margin-left: 16px;
-      margin-right: auto;
-    }
-
-    .div-contact-menu {
-      margin-right: 16px;
-      margin-left: auto;
-    }
-
-    .div-header-menu {
-      margin-left: -16px;
-      margin-right: -16px;
-    }
-  }
-
-  .nav-container {
+  .nav-container .header-menu {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .header-menu {
     gap: 40px;
+    margin-right: 312px;
+    margin-left: 76px;
 
     @media screen and (max-width: 768px) {
-      .header-menu-list {
-        display: none;
+      display: none;
+    }
+
+    @media screen and (max-width: 768) {
+      .header-logo {
+        display: inline-flex;
+        justify-content: flex-start;
       }
     }
 
@@ -125,60 +114,6 @@ svg {
         font-weight: 500;
         line-height: 24px;
         letter-spacing: 0.32px;
-      }
-    }
-  }
-
-  @media screen and (max-width: 1158px) {
-    .header-menu {
-      margin-right: 120px;
-      margin-left: 120px;
-    }
-  }
-
-  @media screen and (min-width: 1158px) {
-    .header-menu {
-      margin-right: 332px;
-      margin-left: 76px;
-    }
-  }
-
-  .contact-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-
-    @media screen and (max-width: 768px) {
-      .contact-menu-list {
-        display: none;
-      }
-    }
-
-    @media screen and (min-width: 768px) {
-      .contact-menu-list {
-        display: block;
-        margin-left: auto;
-
-        font-family: Roboto;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
-        letter-spacing: 0.48px;
-      }
-    }
-  }
-
-  .hamburger-wrapper {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 16px;
-    cursor: pointer;
-
-    @media screen and (min-width: 768px) {
-      .hamburger-icon {
-        display: none;
       }
     }
   }
@@ -232,15 +167,51 @@ svg {
   background-color: var(--IRIS);
 }
 
-/* ----- Contacts Section ----- */
-.div-contact-menu {
+/* Burger Menu */
+.hamburger-wrapper .menu-toggle {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    .hamburger-icon {
+      display: none;
+    }
+  }
+}
+
+/* ----- Contacts Section ----- */
+.contact-menu-wrapper .contact-menu {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 40px;
+
+  @media screen and (max-width: 768px) {
+    .contact-menu-list {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .contact-menu-list {
+      font-family: Roboto;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+      letter-spacing: 0.48px;
+    }
+  }
 
   @media screen and (min-width: 768px) and (max-width: 1158px) {
-    .contact-menu {
-      display: block;
+    .contact-menu-list {
+      flex-direction: row;
+      flex-wrap: wrap;
       gap: 12px;
     }
   }
@@ -937,7 +908,7 @@ ul {
       padding-right: 156px;
 
       .port-card-list {
-        width: calc((100% / 3) - auto);
+        width: calc((100% / 3) - 30px);
       }
     }
   }
@@ -1404,7 +1375,7 @@ footer {
 }
 
 .menu-container .mobile-contact {
-  margin-top: 284px;
+  margin-top: 264px; /*284px*/
   margin-left: 40px;
   text-decoration: none;
 
@@ -1419,7 +1390,7 @@ footer {
   .mobile-contact-link.phone {
     color: var(--IRIS);
     font-family: Roboto;
-    font-size: 36px;
+    font-size: 32px; /*36px*/
     font-weight: 700;
     line-height: 40px;
     letter-spacing: 0.72px;

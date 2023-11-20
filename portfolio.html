@@ -15,19 +15,20 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="./css/styles.css" />
+  <title>Portfolio</title>
 </head>
 <html lang="en">
   <!-- ----- Header Section ----- -->
   <header class="container header-container">
-    <nav class="nav-container">
-      <div class="div-logo-container">
-        <a class="nav-container logo" href="index.html"
-          ><span>Web</span>Studio
-        </a>
-      </div>
+    <div class="header-logo-wrapper">
+      <ul class="header-logo">
+        <a class="logo" href="index.html"><span>Web</span>Studio </a>
+      </ul>
+    </div>
 
-      <div class="div-header-menu">
-        <ul class="nav-container header-menu">
+    <nav class="nav-container">
+      <div class="header-menu-wrapper">
+        <ul class="header-menu">
           <li class="header-menu-list">
             <a class="header-menu-link" href="index.html">Studio</a>
           </li>
@@ -43,21 +44,6 @@
       </div>
     </nav>
 
-    <div class="div-contact-menu">
-      <ul class="contact-menu">
-        <li class="contact-menu-list">
-          <a class="contact-menu-link" href="mailto:info@devstudio"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li class="contact-menu-list">
-          <a class="contact-menu-link" href="tel:+11(000)1111111"
-            >+11 (000) 111-11-11</a
-          >
-        </li>
-      </ul>
-    </div>
-
     <div class="hamburger-wrapper">
       <button
         class="menu-toggle js-open-menu"
@@ -68,6 +54,21 @@
           <use href="/images/icons.svg#hamburger" />
         </svg>
       </button>
+    </div>
+
+    <div class="contact-menu-wrapper">
+      <ul class="contact-menu">
+        <li class="contact-menu-list">
+          <a class="contact-menu-link" href="mailto:info@devstudio"
+            >info@devstudio.com</a
+          >
+        </li>
+        <li class="contact-menu-list">
+          <a class="contact-menu-link" href="tel:+11(000)1111111"
+            ><span>+11 (000) 111-11-11</span></a
+          >
+        </li>
+      </ul>
     </div>
   </header>
 
