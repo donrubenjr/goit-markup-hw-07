@@ -30,12 +30,10 @@
       <div class="header-menu-wrapper">
         <ul class="header-menu">
           <li class="header-menu-list">
-            <a class="header-menu-link" href="index.html">Studio</a>
+            <a class="header-menu-link active" href="index.html">Studio</a>
           </li>
           <li class="header-menu-list">
-            <a class="header-menu-link active" href="portfolio.html"
-              >Portfolio</a
-            >
+            <a class="header-menu-link" href="portfolio.html">Portfolio</a>
           </li>
           <li class="header-menu-list">
             <a class="header-menu-link" href="#contacts">Contacts</a>
@@ -43,18 +41,6 @@
         </ul>
       </div>
     </nav>
-
-    <div class="hamburger-wrapper">
-      <button
-        class="menu-toggle js-open-menu"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
-        <svg class="hamburger-icon" width="32" heigth="22">
-          <use href="/images/icons.svg#hamburger" />
-        </svg>
-      </button>
-    </div>
 
     <div class="contact-menu-wrapper">
       <ul class="contact-menu">
@@ -65,10 +51,23 @@
         </li>
         <li class="contact-menu-list">
           <a class="contact-menu-link" href="tel:+11(000)1111111"
-            ><span>+11 (000) 111-11-11</span></a
+            >+11 (000) 111-11-11</a
           >
         </li>
       </ul>
+    </div>
+
+    <div class="hamburger-wrapper">
+      <button
+        type="button"
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="hamburger-icon" width="32" heigth="22">
+          <use href="images/icons.svg#hamburger" />
+        </svg>
+      </button>
     </div>
   </header>
 
