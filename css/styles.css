@@ -47,24 +47,6 @@ svg {
 .container {
   margin-left: auto;
   margin-right: auto;
-
-  /* @media screen and (min-width: 428px) {
-    .container {
-      max-width: 428px;
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    .container {
-      max-width: 768px;
-    }
-  }
-
-  @media screen and (min-width: 1158px) {
-    .container {
-      max-width: 1158px;
-    }
-  } */
 }
 
 /* ----- Header Section ----- */
@@ -73,7 +55,6 @@ svg {
   justify-content: space-between;
   align-items: center;
   padding-inline: 156px;
-  /* padding-right: 156px; */
   height: 72px;
 
   @media (width >= 768px) {
@@ -91,8 +72,8 @@ svg {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    margin-right: 312px;
-    margin-left: 76px;
+    /* margin-right: 312px; */
+    /* margin-left: 76px; */
 
     @media (width < 768px) {
       display: none;
@@ -110,24 +91,38 @@ svg {
   }
 }
 
+@media (width < 768px) {
+  .nav-container, .contact-menu-wrapper{
+    display: none;
+  }
+}
+
 @media (width < 1158px) {
-  .container.container.header-container {
+  .container.header-container {
     padding: 24px;
   }
 }
 
-/* @media (max-width >= 768px), (width < 1158px) {
-  .nav-container .header-menu {
-    margin-right: 76px;
+@media (width >= 768px) {
+  .hamburger-wrapper, .menu-toggle {
+    display: none;
   }
 }
 
-@media (max-width >= 768px), (width < 1158px) {
-  .contact-menu .contact-menu-list {
-    display: flex;
-    flex-direction: column;
+@media (width >= 768px) and (width < 1158px) {
+  .nav-container .header-menu{
+    gap: 24px;
+    margin-right: 0px;
+    margin-left: 40px;
   }
-} */
+}
+
+@media (width >= 1158px) {
+  .nav-container .header-menu {
+    margin-right: 312px;
+    margin-left: 76px;
+  }
+}  
 
 .logo {
   text-decoration: none;
@@ -196,16 +191,13 @@ svg {
 
 /* ----- Contacts Section ----- */
 .contact-menu-wrapper .contact-menu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: column;
+  align-items: center; 
   justify-content: center;
   gap: 40px;
 
-  @media (max-width: 768px) {
-    .contact-menu-list {
-      display: none;
-    }
+  @media (width < 768px) {
+    display: none;
   }
 
   @media (width < 1158px) {
@@ -220,11 +212,14 @@ svg {
 
   @media (width < 1158px) {
     .contact-menu-list {
-      flex-direction: row;
-      flex-wrap: wrap;
-      /* display: block; */
       gap: 12px;
     }
+  }
+}
+
+@media (width >= 1158px) {
+  .contact-menu-wrapper .contact-menu{
+  display: flex;
   }
 }
 

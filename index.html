@@ -44,18 +44,6 @@
         </div>
       </nav>
 
-      <div class="hamburger-wrapper">
-        <button
-          class="menu-toggle js-open-menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg class="hamburger-icon" width="32" heigth="22">
-            <use href="/images/icons.svg#hamburger" />
-          </svg>
-        </button>
-      </div>
-
       <div class="contact-menu-wrapper">
         <ul class="contact-menu">
           <li class="contact-menu-list">
@@ -69,6 +57,14 @@
             >
           </li>
         </ul>
+      </div>
+
+      <div class="hamburger-wrapper">
+        <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="hamburger-icon" width="32" heigth="22">
+            <use href="/images/icons.svg#hamburger" />
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -676,7 +672,7 @@
             <svg class="subscribe-icon">
               <use href="./images/icons.svg#send" />
             </svg>
-            <button
+            <button type="button" 
               class="footer-button-submit"
               type="submit"
               id="id_subscription"
