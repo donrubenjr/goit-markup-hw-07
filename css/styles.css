@@ -1322,6 +1322,10 @@ footer {
   height: 24px;
 }
 
+.subscribe-icon:hover {
+  cursor: pointer;
+}
+
 /* -- ----- Mobile Menu ----- -- */
 
 .menu-toggle {
@@ -1395,7 +1399,7 @@ footer {
 }
 
 .menu-container .mobile-contact {
-  margin-top: 264px; /*284px*/
+  margin-top: 264px;
   margin-left: 40px;
   text-decoration: none;
 
@@ -1410,7 +1414,7 @@ footer {
   .mobile-contact-link.phone {
     color: var(--IRIS);
     font-family: Roboto;
-    font-size: 32px; /*36px*/
+    font-size: 32px;
     font-weight: 700;
     line-height: 40px;
     letter-spacing: 0.72px;
